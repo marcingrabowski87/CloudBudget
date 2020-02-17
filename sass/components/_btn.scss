@@ -1,0 +1,10 @@
+.btn {
+  width: 160px;
+  height: 50px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-transform: uppercase;
+  &:hover {
+    opacity: 0.8;
+  }
+}

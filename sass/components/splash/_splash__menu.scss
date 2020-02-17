@@ -1,0 +1,42 @@
+.splash {
+  $color-text: #fff;
+  &__menu {
+    &__list {
+      display: flex;
+    }
+    &__link {
+      @include size-weight-color(14px, bold, $color-text);
+      text-transform: uppercase;
+      padding-left: 20px;
+      text-decoration: none;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+    &__item {
+      list-style: none;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .splash {
+    &__menu {
+      position: fixed;
+      top: 118px;
+      left: 0;
+      right: 0;
+      &__list {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        background: linear-gradient(90deg, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%);
+        &.active {
+          display: block;
+        }
+      }
+      &__item {
+        padding: 20px 0;
+      }
+    }
+  }
+}

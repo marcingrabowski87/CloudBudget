@@ -1,0 +1,26 @@
+.contact {
+  padding-top: 72px;
+  margin-top: -72px;
+  &__form {
+    padding-left: 15px;
+    width: 50%;
+  }
+  &__box {
+    @include flex-justify(flex, space-between);
+    padding: 117px 0 78px;
+    &__inner {
+      padding-left: 11px;
+      width: 50%;
+      margin-right: 20px;
+      &__title {
+        @include title-section-align(left);
+        margin-bottom: 53px;
+      }
+      &__text {
+        @include size-weight-color(14px, normal, #000);
+        @include align-line-height(justify, 140%);
+        max-width: 435px;
+      }
+    }
+  }
+}

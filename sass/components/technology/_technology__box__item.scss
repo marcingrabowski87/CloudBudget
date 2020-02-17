@@ -1,0 +1,108 @@
+.technology {
+  &__box {
+    &__item {
+      text-align: center;
+      padding: 0 31px;
+      width: 255px;
+      &__number {
+        @include size-weight-color(100px, bold, rgba(16, 16, 16, 0.08));
+        text-align: center;
+      }
+      &__inner {
+        margin-top: 19px;
+        position: relative;
+        &__title {
+          @include size-weight-color(18px, bold, #101010);
+        }
+        &__text {
+          @include size-weight-color(12px, normal, #000);
+          margin-top: 10px;
+        }
+        &::before {
+          @include pseudo-element;
+        }
+        &-cloude {
+          &::before {
+            @include pseudo-element-url-width-height-top-left(
+              url("../img/Frame 3-min.png") no-repeat,
+              80px,
+              80px,
+              -80px,
+              50%
+            );
+          }
+        }
+
+        &-secure {
+          &::before {
+            @include pseudo-element-url-width-height-top-left(
+              url("../img/Frame 4-min.png") no-repeat,
+              66px,
+              66px,
+              -74px,
+              50%
+            );
+          }
+        }
+        &-pdf {
+          &::before {
+            @include pseudo-element-url-width-height-top-left(
+              url("../img/Frame 6-min.png") no-repeat,
+              70px,
+              70px,
+              -78px,
+              50%
+            );
+          }
+        }
+        &-csv {
+          &::before {
+            @include pseudo-element-url-width-height-top-left(
+              url("../img/Frame 5-min.png") no-repeat,
+              47px,
+              54px,
+              -68px,
+              50%
+            );
+          }
+        }
+      }
+    }
+  }
+}
+
+/* RWD */
+@media screen and (max-width: 900px) {
+  .technology {
+    &__box {
+      &__item {
+        padding: 0 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .technology {
+    &__box {
+      &__item {
+        width: 50%;
+        &__inner {
+          &__text {
+            padding: 0 70px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .technology {
+    &__box {
+      &__item {
+        width: 100%;
+      }
+    }
+  }
+}

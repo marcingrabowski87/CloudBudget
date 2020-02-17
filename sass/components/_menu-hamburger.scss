@@ -1,0 +1,29 @@
+.menu-hamburger {
+  display: none;
+  transform: translateY(-25%);
+  &__item1 {
+    @include general-settings-for-menu-hamburger;
+    &.active {
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+  }
+  &__item2 {
+    @include general-settings-for-menu-hamburger;
+    &.active {
+      opacity: 0;
+    }
+  }
+  &__item3 {
+    @include general-settings-for-menu-hamburger;
+    &.active {
+      transform: rotate(45deg) translate(-8px, -8px);
+    }
+  }
+}
+
+/* RWD */
+@media screen and (max-width: 768px) {
+  .menu-hamburger {
+    display: block;
+  }
+}

@@ -1,0 +1,76 @@
+/* font */
+$font-family: "Lato", sans-serif;
+
+/* Extend */
+%the-same-settings-for-form {
+  font-family: $font-family;
+  border-radius: 6px;
+  border: 1px solid #333333;
+  font-size: 16px;
+  padding: 1px 0 0 31px;
+  height: 60px;
+}
+%text-error {
+  color: rgb(236, 17, 17);
+  font-size: 10px;
+  left: 32px;
+  position: absolute;
+}
+
+%form-fullname-input {
+  top: 66px;
+}
+/* mixin */
+@mixin size-weight-color($size, $weight, $color) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+@mixin flex-justify($flex, $justify) {
+  display: $flex;
+  justify-content: $justify;
+}
+
+@mixin pseudo-element {
+  position: absolute;
+  content: "";
+  display: block;
+}
+@mixin pseudo-element-url-width-height-top-left($url, $width, $height, $top, $left) {
+  background: $url;
+  width: $width;
+  height: $height;
+  top: $top;
+  left: $left;
+  transform: translate(-50%);
+}
+
+@mixin title-section-align($text-align) {
+  $color-default-dark: #000;
+  @include size-weight-color(36px, 600, $color-default-dark);
+  text-align: $text-align;
+}
+@mixin align-line-height($align, $line) {
+  text-align: $align;
+  line-height: $line;
+}
+
+@mixin form-input-settings {
+  @extend %the-same-settings-for-form;
+  ::placeholder {
+    color: rgba(19, 39, 67, 0.5);
+  }
+  :-ms-input-placeholder {
+    color: rgba(19, 39, 67, 0.5);
+  }
+  ::-ms-input-placeholder {
+    color: rgba(19, 39, 67, 0.5);
+  }
+}
+@mixin general-settings-for-menu-hamburger {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
